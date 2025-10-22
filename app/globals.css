@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Import custom font */
+@font-face {
+  font-family: 'ArchivoNarrowRegular';
+  src: url('/fonts/ArchivoNarrow-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base styles */
+:root {
+  --hunter-green: #386641;
+  --asparagus: #6a994e;
+  --yellow-green: #a7c957;
+  --parchment: #f2e8cf;
+  --bittersweet-shimmer: #bc4749;
+}
+
+body {
+  font-family: 'ArchivoNarrowRegular', sans-serif;
+  background-color: var(--parchment);
+  color: #1f2937;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--asparagus);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hunter-green);
+}
+
+/* Loading skeleton animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
